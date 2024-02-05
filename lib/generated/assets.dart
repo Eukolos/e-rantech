@@ -14,7 +14,7 @@ class Assets {
   static const String menuSvgLogistic = 'assets/images/menu_svg/logistic.svg';
   static const String menuSvgManagement = 'assets/images/menu_svg/management.svg';
   static const String menuSvgPurchasing = 'assets/images/menu_svg/purchasing.svg';
-  static const String srcApp = 'lib/src/app.dart';
+  static const String srcApp = 'lib/src/home_screen.dart';
   static const String widgetsAppBar = 'lib/src/widgets/app_bar.dart';
   static const String widgetsLargeScreen = 'lib/src/widgets/large_screen.dart';
   static const String widgetsMenuItems = 'lib/src/widgets/menu_items.dart';

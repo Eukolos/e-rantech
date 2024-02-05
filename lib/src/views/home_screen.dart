@@ -2,19 +2,20 @@ import 'package:erantech/src/widgets/app_bar.dart';
 import 'package:erantech/src/widgets/large_screen.dart';
 import 'package:erantech/src/widgets/menu_items.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-import 'helpers/responsiveness.dart';
+import '../helpers/responsiveness.dart';
 
-class Rantech extends StatefulWidget {
-  const Rantech({super.key, required this.title});
+class HomeScreen extends ConsumerStatefulWidget {
+  const HomeScreen({super.key, required this.title});
 
   final String title;
 
   @override
-  State<Rantech> createState() => _RantechState();
+  ConsumerState<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _RantechState extends State<Rantech> {
+class _HomeScreenState extends ConsumerState<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
