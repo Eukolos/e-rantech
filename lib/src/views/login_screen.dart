@@ -1,6 +1,6 @@
 import 'package:erantech/src/helpers/responsiveness.dart';
 import 'package:erantech/src/providers/login_controller_provider.dart';
-import 'package:erantech/src/providers/states/login_states.dart';
+import 'package:erantech/src/providers/states/login_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -13,13 +13,14 @@ class LoginScreen extends ConsumerStatefulWidget {
 }
 
 class _LoginScreenState extends ConsumerState<LoginScreen> {
+
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
 
-
   @override
   Widget build(BuildContext context) {
-    var loginState = ref.read(loginControllerProvider.notifier);
+    var loginState = ref.watch(loginControllerProvider);
+
     return Scaffold(
         body: ResponsiveWidget(
       largeScreen: Container(
@@ -63,8 +64,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                               'Ayz Yedek Parça Paz. Ltd. Şti.',
                               style: TextStyle(fontSize: 20),
                             )),
-                        if(loginState is LoginStateError)
-                          const Text('Hatalı Giriş Yaptınız', style: TextStyle(color: Colors.red),),
+
                         Container(
                           padding: const EdgeInsets.all(10),
                           child: TextField(
@@ -110,7 +110,31 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                               },
                             )),
                         const SizedBox(
-                          height: 100,
+                          height: 20,
+                        ),
+                        if(loginState is LoginStateError)
+                          Padding(
+                            padding: const EdgeInsets.only(left: 10.0),
+                            child: Text(loginState.error, style: const TextStyle(color: Colors.red, fontSize: 16, fontWeight: FontWeight.w400),),
+                          ),
+                        if(loginState is !LoginStateError)
+                          const Padding(
+                            padding: EdgeInsets.only(left: 10.0),
+                            child: Text(""),
+                          ),
+                        if(loginState is !LoginStateLoading)
+                         const SizedBox(
+                          height: 50,
+                        ),
+                        if(loginState is LoginStateLoading)
+                          const SizedBox(
+                            height: 50,
+                            child: Center(
+                              child: CircularProgressIndicator(),
+                            ),),
+
+                        const SizedBox(
+                          height: 50,
                         ),
                       ],
                     ),
@@ -119,6 +143,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           ],
         ),
       ),
+
+
+
       smallScreen: Container(
         height: double.infinity,
         decoration: const BoxDecoration(
@@ -190,8 +217,29 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                       },
                     )),
                 const SizedBox(
-                  height: 100,
+                  height: 20,
                 ),
+                if(loginState is LoginStateError)
+                  Padding(
+                    padding: const EdgeInsets.only(left: 10.0),
+                    child: Text(loginState.error, style: const TextStyle(color: Colors.red, fontSize: 16, fontWeight: FontWeight.w400),),
+                  ),
+                if(loginState is !LoginStateError)
+                  const Padding(
+                    padding: EdgeInsets.only(left: 10.0),
+                    child: Text(""),
+                  ),
+                if(loginState is !LoginStateLoading)
+                  const SizedBox(
+                    height: 50,
+                  ),
+                if(loginState is LoginStateLoading)
+                  const SizedBox(
+                    height: 50,
+                    child: Center(
+                      child: CircularProgressIndicator(),
+                    ),),
+
               ],
             )),
       ),

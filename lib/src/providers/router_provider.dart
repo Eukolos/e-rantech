@@ -1,7 +1,7 @@
 
 import 'package:erantech/src/views/home_screen.dart';
 import 'package:erantech/src/providers/login_controller_provider.dart';
-import 'package:erantech/src/providers/states/login_states.dart';
+import 'package:erantech/src/providers/states/login_state.dart';
 import 'package:erantech/src/views/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';

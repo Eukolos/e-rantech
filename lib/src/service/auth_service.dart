@@ -11,14 +11,19 @@ class AuthService {
       'email': email,
       'password': password,
     };
-    Response response = await dio.post(
-      '$baseUrl/api/v1/auth/authenticate',
-      data: requestBody,
-    );
 
-    String authToken = response.data['token'];
-    print(authToken);
-    return response.statusCode.toString();
+
+    try {
+      Response response = await dio.post(
+        '$baseUrl/api/v1/auth/login',
+        data: requestBody,
+      );
+      print(response.data);
+      return response.data['status'];
+    } catch (e) {
+      print("Error from dio catch: $e");
+      return "500";
+    }
   }
 }
 
