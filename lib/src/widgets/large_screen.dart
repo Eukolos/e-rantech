@@ -6,8 +6,11 @@ import '../constants/image_path.dart';
 import 'menu_items.dart';
 
 class LargeScreen extends StatelessWidget {
+  final Widget widget;
+
   const LargeScreen({
     super.key,
+    required this.widget,
   });
 
   @override
@@ -17,15 +20,8 @@ class LargeScreen extends StatelessWidget {
         SizedBox(
           width: 300,
           child: MenuItems(isDrawer: false,),
-        ),
-        Expanded(
-          flex: 4, // Represents 70% of the available space
-          child: Container(
-            height: 1000,
-            //hex color
-            color: const Color(0xffF6F6F6),
-          ),
-        ),
+        ),widget,
+
       ],
     );
   }

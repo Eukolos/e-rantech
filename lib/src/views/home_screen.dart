@@ -23,10 +23,24 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       key: scaffoldKey,
       appBar: topNavigationBar(context, scaffoldKey),
       drawer: Drawer(
-        child: MenuItems(isDrawer: true,),
+        child: MenuItems(
+          isDrawer: true,
+        ),
       ),
-      body: ResponsiveWidget(largeScreen: const LargeScreen(), smallScreen: Container(color: Colors.black45,)),
+      body: ResponsiveWidget(
+          largeScreen: LargeScreen(
+            widget: Expanded(
+              flex: 4, // Represents 70% of the available space
+              child: Container(
+                height: 1000,
+                //hex color
+                color: const Color(0xffF6F6F6),
+              ),
+            ),
+          ),
+          smallScreen: Container(
+            color: Colors.black45,
+          )),
     );
   }
 }
-

@@ -9,19 +9,18 @@ class LoginController extends StateNotifier<LoginState> {
 
   void login(String email, String password) async {
     state = const LoginStateLoading();
-
-    try {
-      await ref.read(authRepositoryProvider).login(email, password);
+    String status =
+        await ref.read(authRepositoryProvider).login(email, password);
+    if (int.parse(status) > 250) {
+      state = const LoginStateError('error');
+      return;
+    } else {
       state = const LoginStateSuccess();
-
-
-    } catch (e) {
-      state = LoginStateError(e.toString());
     }
   }
 }
 
 final loginControllerProvider =
-StateNotifierProvider<LoginController, LoginState>((ref) {
+    StateNotifierProvider<LoginController, LoginState>((ref) {
   return LoginController(ref);
 });

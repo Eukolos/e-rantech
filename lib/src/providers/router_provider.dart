@@ -30,15 +30,18 @@ class RouterNotifier extends ChangeNotifier {
     final loginState = _ref.read(loginControllerProvider);
 
     final areWeLoggingIn = state.matchedLocation == '/login';
-    print(state.matchedLocation);
 
     if (loginState is LoginStateInitial) {
       return areWeLoggingIn ? null : '/login';
+    }  else if (loginState is LoginStateError) {
+      return areWeLoggingIn ? null : '/login';
+    } else if (loginState is LoginStateLoading) {
+      return areWeLoggingIn ? null : '/login';
+    } else if (loginState is LoginStateSuccess) {
+      return areWeLoggingIn ? '/' : null;
     }
 
-    if (areWeLoggingIn) return '/';
 
-    return null;
   }
 
 
