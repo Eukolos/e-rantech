@@ -42,9 +42,9 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                   padding: const EdgeInsets.only(right: 100),
                   child: Container(
                     padding: const EdgeInsets.all(40),
-                    decoration: const BoxDecoration(
-                      color: Colors.white60,
-                      borderRadius: BorderRadius.all(
+                    decoration:  BoxDecoration(
+                      color: Colors.white.withOpacity(1),
+                      borderRadius: const BorderRadius.all(
                         Radius.circular(30),
                       ),
                     ),
@@ -101,7 +101,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             child: ElevatedButton(
                               child: const Text(
                                 'Giriş Yapınız',
-                                style: TextStyle(color: Colors.white70),
+                                style: TextStyle(color: Colors.white),
                               ),
                               onPressed: () {
                                 ref.read(loginControllerProvider.notifier).login(
@@ -134,7 +134,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
                             ),),
 
                         const SizedBox(
-                          height: 50,
+                          height: 30,
                         ),
                       ],
                     ),
@@ -151,7 +151,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         decoration: const BoxDecoration(
           image: DecorationImage(
             image: AssetImage('assets/images/bg_image.jpg'),
-            fit: BoxFit.fill,
+            fit: BoxFit.fitHeight,
           ),
         ),
         child: Padding(

@@ -32,5 +32,6 @@ class Assets {
   static const String widgetsAppBar = 'lib/src/widgets/app_bar.dart';
   static const String widgetsLargeScreen = 'lib/src/widgets/large_screen.dart';
   static const String widgetsMenuItems = 'lib/src/widgets/menu_items.dart';
+  static const String widgetsMenuItems2 = 'lib/src/widgets/menu_items2.dart';
 
 }

@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../helpers/responsiveness.dart';
+import '../widgets/menu_items2.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key, required this.title});
@@ -23,7 +24,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       key: scaffoldKey,
       appBar: topNavigationBar(context, scaffoldKey),
       drawer: Drawer(
-        child: MenuItems(
+        child: MenuItems2(
           isDrawer: true,
         ),
       ),

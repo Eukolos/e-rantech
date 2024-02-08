@@ -4,10 +4,10 @@ import 'package:flutter_svg/svg.dart';
 
 import '../constants/image_path.dart';
 
-class MenuItems extends StatelessWidget {
+class MenuItems2 extends StatelessWidget {
   bool isDrawer;
 
-  MenuItems({
+  MenuItems2({
     super.key,
     required this.isDrawer,
   });

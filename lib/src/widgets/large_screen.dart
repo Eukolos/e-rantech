@@ -17,9 +17,30 @@ class LargeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SizedBox(
+        Container(
           width: 300,
-          child: MenuItems(isDrawer: false,),
+          height: double.infinity,
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(child: MenuItems(isDrawer: false,)),
+              const Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: EdgeInsets.only(bottom: 4),
+                  child: Text(
+                    "© 2024 POWERED BY eukolos",
+                    style: TextStyle(
+                      color: Colors.black45,
+                      fontSize: 8,
+                    ),
+                  ),
+                ),
+              ),
+              
+            ],
+          ),
         ),widget,
 
       ],
