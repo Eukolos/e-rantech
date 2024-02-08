@@ -1,5 +1,8 @@
 import 'package:dio/dio.dart';
+import 'package:erantech/src/providers/token_controller_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'dart:convert';
+
 
 class AuthService {
   Future<String> login(String email, String password) async {
@@ -13,13 +16,18 @@ class AuthService {
     };
 
 
+
     try {
       Response response = await dio.post(
-        '$baseUrl/api/v1/auth/login',
+        '$baseUrl/api/v1/auth/authenticate',
         data: requestBody,
       );
-      print(response.data);
-      return response.data['status'];
+      final loginController = ProviderContainer().read(tokenControllerProvider.notifier);
+      final jwt = response.data['token'];
+      loginController.token(jwt);
+
+      // i wanna parse wi
+      return response.statusCode.toString();
     } catch (e) {
       print("Error from dio catch: $e");
       return "500";

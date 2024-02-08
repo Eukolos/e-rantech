@@ -1,3 +1,4 @@
+import 'package:erantech/src/models/user.dart';
 import 'package:erantech/src/service/token_service.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -6,7 +7,7 @@ class TokenRepository {
 
   TokenRepository(this._tokenService);
 
-  Future<String> tokenExtraction(String token) async {
+  Future<User> tokenExtraction(String token) async {
     return _tokenService.tokenExtraction(token);
   }
 }

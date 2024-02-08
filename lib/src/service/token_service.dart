@@ -1,10 +1,17 @@
+import 'package:erantech/src/models/user.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:jwt_decoder/jwt_decoder.dart';
 class TokenService {
-  Future<String> tokenExtraction(String token) async {
+  Future<User> tokenExtraction(String token) async {
     var decodedData = JwtDecoder.decode(token);
     print(decodedData);
-    return token;
+    try {
+      User user = User.fromJson(decodedData, token);
+      return user;
+    } catch (e) {
+      print(e);
+      throw e;
+    }
   }
 }
 

@@ -16,6 +16,8 @@ class Assets {
   static const String menuSvgLogistic = 'assets/images/menu_svg/logistic.svg';
   static const String menuSvgManagement = 'assets/images/menu_svg/management.svg';
   static const String menuSvgPurchasing = 'assets/images/menu_svg/purchasing.svg';
+  static const String modelsRole = 'lib/src/models/role.dart';
+  static const String modelsUser = 'lib/src/models/user.dart';
   static const String providersLoginControllerProvider = 'lib/src/providers/login_controller_provider.dart';
   static const String providersRouterProvider = 'lib/src/providers/router_provider.dart';
   static const String providersTokenControllerProvider = 'lib/src/providers/token_controller_provider.dart';
@@ -23,7 +25,7 @@ class Assets {
   static const String repositoryTokenRepository = 'lib/src/repository/token_repository.dart';
   static const String serviceAuthService = 'lib/src/service/auth_service.dart';
   static const String serviceTokenService = 'lib/src/service/token_service.dart';
-  static const String statesLoginStates = 'lib/src/providers/states/login_states.dart';
+  static const String statesLoginState = 'lib/src/providers/states/login_state.dart';
   static const String statesTokenState = 'lib/src/providers/states/token_state.dart';
   static const String viewsHomeScreen = 'lib/src/views/home_screen.dart';
   static const String viewsLoginScreen = 'lib/src/views/login_screen.dart';
