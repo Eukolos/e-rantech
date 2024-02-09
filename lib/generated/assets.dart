@@ -22,12 +22,14 @@ class Assets {
   static const String providersLoginControllerProvider = 'lib/src/providers/login_controller_provider.dart';
   static const String providersRouterProvider = 'lib/src/providers/router_provider.dart';
   static const String providersTokenControllerProvider = 'lib/src/providers/token_controller_provider.dart';
+  static const String providersUserControllerProvider = 'lib/src/providers/user_controller_provider.dart';
   static const String repositoryAuthRepository = 'lib/src/repository/auth_repository.dart';
   static const String repositoryTokenRepository = 'lib/src/repository/token_repository.dart';
   static const String serviceAuthService = 'lib/src/service/auth_service.dart';
   static const String serviceTokenService = 'lib/src/service/token_service.dart';
   static const String statesLoginState = 'lib/src/providers/states/login_state.dart';
   static const String statesTokenState = 'lib/src/providers/states/token_state.dart';
+  static const String statesUserState = 'lib/src/providers/states/user_state.dart';
   static const String viewsHomeScreen = 'lib/src/views/home_screen.dart';
   static const String viewsLoginScreen = 'lib/src/views/login_screen.dart';
   static const String widgetsAppBar = 'lib/src/widgets/app_bar.dart';
