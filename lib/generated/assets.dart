@@ -16,6 +16,7 @@ class Assets {
   static const String menuSvgLogistic = 'assets/images/menu_svg/logistic.svg';
   static const String menuSvgManagement = 'assets/images/menu_svg/management.svg';
   static const String menuSvgPurchasing = 'assets/images/menu_svg/purchasing.svg';
+  static const String menuSvgUserMale = 'assets/images/menu_svg/user_male.png';
   static const String modelsRole = 'lib/src/models/role.dart';
   static const String modelsUser = 'lib/src/models/user.dart';
   static const String providersLoginControllerProvider = 'lib/src/providers/login_controller_provider.dart';
@@ -33,5 +34,6 @@ class Assets {
   static const String widgetsLargeScreen = 'lib/src/widgets/large_screen.dart';
   static const String widgetsMenuItems = 'lib/src/widgets/menu_items.dart';
   static const String widgetsMenuItems2 = 'lib/src/widgets/menu_items2.dart';
+  static const String widgetsMenuUser = 'lib/src/widgets/menu_user.dart';
 
 }

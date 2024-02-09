@@ -1,6 +1,7 @@
 import 'package:erantech/src/widgets/app_bar.dart';
 import 'package:erantech/src/widgets/large_screen.dart';
 import 'package:erantech/src/widgets/menu_items.dart';
+import 'package:erantech/src/widgets/menu_user.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -24,8 +25,30 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       key: scaffoldKey,
       appBar: topNavigationBar(context, scaffoldKey),
       drawer: Drawer(
-        child: MenuItems2(
-          isDrawer: true,
+        elevation: 0,
+        backgroundColor: Colors.white,
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: MenuItems(
+                isDrawer: true,
+              ),
+            ),
+            MenuUserWidget(),
+            const Align(
+              alignment: Alignment.bottomCenter,
+              child: Padding(
+                padding: EdgeInsets.only(bottom: 4),
+                child: Text(
+                  "© 2024 POWERED BY eukolos",
+                  style: TextStyle(
+                    color: Colors.black45,
+                    fontSize: 8,
+                  ),
+                ),
+              ),
+            ),
+          ],
         ),
       ),
       body: ResponsiveWidget(
@@ -45,3 +68,4 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
     );
   }
 }
+
