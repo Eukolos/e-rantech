@@ -1,3 +1,4 @@
+import 'package:erantech/src/widgets/menu_user.dart';
 import 'package:expansion_tile_card/expansion_tile_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -24,7 +25,8 @@ class LargeScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Expanded(child: MenuItems(isDrawer: false,)),
+              Expanded(flex:3,child: MenuItems(isDrawer: false,)),
+              MenuUserWidget(),
               const Align(
                 alignment: Alignment.bottomCenter,
                 child: Padding(

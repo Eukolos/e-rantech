@@ -16,17 +16,14 @@ class Assets {
   static const String menuSvgLogistic = 'assets/images/menu_svg/logistic.svg';
   static const String menuSvgManagement = 'assets/images/menu_svg/management.svg';
   static const String menuSvgPurchasing = 'assets/images/menu_svg/purchasing.svg';
+  static const String menuSvgUserFemale = 'assets/images/menu_svg/user_female.png';
   static const String menuSvgUserMale = 'assets/images/menu_svg/user_male.png';
   static const String modelsRole = 'lib/src/models/role.dart';
   static const String modelsUser = 'lib/src/models/user.dart';
   static const String providersLoginControllerProvider = 'lib/src/providers/login_controller_provider.dart';
   static const String providersRouterProvider = 'lib/src/providers/router_provider.dart';
-  static const String providersTokenControllerProvider = 'lib/src/providers/token_controller_provider.dart';
-  static const String providersUserControllerProvider = 'lib/src/providers/user_controller_provider.dart';
   static const String repositoryAuthRepository = 'lib/src/repository/auth_repository.dart';
-  static const String repositoryTokenRepository = 'lib/src/repository/token_repository.dart';
   static const String serviceAuthService = 'lib/src/service/auth_service.dart';
-  static const String serviceTokenService = 'lib/src/service/token_service.dart';
   static const String statesLoginState = 'lib/src/providers/states/login_state.dart';
   static const String statesTokenState = 'lib/src/providers/states/token_state.dart';
   static const String statesUserState = 'lib/src/providers/states/user_state.dart';
@@ -35,7 +32,6 @@ class Assets {
   static const String widgetsAppBar = 'lib/src/widgets/app_bar.dart';
   static const String widgetsLargeScreen = 'lib/src/widgets/large_screen.dart';
   static const String widgetsMenuItems = 'lib/src/widgets/menu_items.dart';
-  static const String widgetsMenuItems2 = 'lib/src/widgets/menu_items2.dart';
   static const String widgetsMenuUser = 'lib/src/widgets/menu_user.dart';
 
 }

@@ -71,6 +71,7 @@ flutter:
     - assets/images/menu_svg/management.svg
     - assets/images/menu_svg/purchasing.svg
     - assets/images/menu_svg/user_male.png
+    - assets/images/menu_svg/user_female.png
     - lib/src/helpers/
   #   - images/a_dot_ham.jpeg
 

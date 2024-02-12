@@ -27,6 +27,18 @@ class User {
     );
   }
 
+  Map<String, dynamic> toJson() {
+    return {
+      'name': name,
+      'surname': surname,
+      'gender': gender,
+      'email': email,
+      'token': token,
+      'roles': roles.map((role) => role.toJson()).toList(),
+    };
+  }
+
+
   @override
   String toString() {
     return 'User{name: $name, surname: $surname, gender: $gender, email: $email, roles: $roles}';

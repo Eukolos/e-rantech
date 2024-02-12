@@ -32,6 +32,12 @@ class Authority {
   String toString() {
     return authority.toString().split('.').last;
   }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'authority': authority.toString().split('.').last,
+    };
+  }
 }
 
 class Role {
@@ -45,6 +51,12 @@ class Role {
   @override
   String toString() {
     return authority.toString();
+  }
+
+  Map<String, dynamic> toJson() {
+    return {
+      'authority': authority.toString(),
+    };
   }
 }
 

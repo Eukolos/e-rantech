@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:erantech/src/models/user.dart';
 
 class LoginState extends Equatable {
   const LoginState();
@@ -22,7 +23,8 @@ class LoginStateLoading extends LoginState {
 }
 
 class LoginStateSuccess extends LoginState {
-  const LoginStateSuccess();
+  final User user;
+  const LoginStateSuccess(this.user);
 
   @override
   List<Object> get props => [];

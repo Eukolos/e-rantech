@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../helpers/responsiveness.dart';
-import '../widgets/menu_items2.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key, required this.title});
@@ -30,6 +29,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
         child: Column(
           children: <Widget>[
             Expanded(
+              flex: 3,
               child: MenuItems(
                 isDrawer: true,
               ),

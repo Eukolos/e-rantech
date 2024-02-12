@@ -1,14 +1,14 @@
 import 'package:dio/dio.dart';
-import 'package:erantech/src/providers/token_controller_provider.dart';
+import 'package:erantech/src/models/user.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'dart:convert';
+import 'package:jwt_decoder/jwt_decoder.dart';
 
 
 class AuthService {
-  Future<String> login(String email, String password) async {
+  Future<User?> login(String email, String password) async {
     Dio dio = Dio();
 
-    const String baseUrl = 'http://localhost:8081';
+    const String baseUrl = 'http://192.168.1.141:8081';
 
     Map<String, dynamic> requestBody = {
       'email': email,
@@ -22,15 +22,13 @@ class AuthService {
         '$baseUrl/api/v1/auth/authenticate',
         data: requestBody,
       );
-      final loginController = ProviderContainer().read(tokenControllerProvider.notifier);
       final jwt = response.data['token'];
-      loginController.token(jwt);
+      var decodedData = JwtDecoder.decode(jwt);
+      User user = User.fromJson(decodedData, jwt);
 
-      // i wanna parse wi
-      return response.statusCode.toString();
+      return user;
     } catch (e) {
-      print("Error from dio catch: $e");
-      return "500";
+      return null;
     }
   }
 }

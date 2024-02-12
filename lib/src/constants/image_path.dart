@@ -6,4 +6,6 @@ class ImagePath {
   static const String logistic = 'assets/images/menu_svg/logistic.svg';
   static const String management = 'assets/images/menu_svg/management.svg';
   static const String purchasing = 'assets/images/menu_svg/purchasing.svg';
+  static const String user_male = 'assets/images/menu_svg/user_male.png';
+  static const String user_female = 'assets/images/menu_svg/user_female.png';
 }

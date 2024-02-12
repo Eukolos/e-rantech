@@ -2,38 +2,28 @@ import 'package:equatable/equatable.dart';
 import 'package:erantech/src/models/user.dart';
 
 class UserState extends Equatable {
-  final User user;
+  final User? user;
+  final String? error;
+  final bool isLoading;
 
-  const UserState(this.user);
+  const UserState({
+    this.user,
+    this.error,
+    this.isLoading = false,
+  });
 
-  @override
-  List<Object> get props => [user];
-
-}
-
-class UserStateInitial extends UserState {
-  const UserStateInitial(User user) : super(user);
-
-  @override
-  List<Object> get props => [];
-}
-class UserStateLoading extends UserState {
-  const UserStateLoading();
-
-  @override
-  List<Object> get props => [];
-}
-class UserStateSuccess extends UserState {
-  const UserStateSuccess();
+  UserState copyWith({
+    User? user,
+    String? error,
+    bool? isLoading,
+  }) {
+    return UserState(
+      user: user ?? this.user,
+      error: error ?? this.error,
+      isLoading: isLoading ?? this.isLoading,
+    );
+  }
 
   @override
-  List<Object> get props => [];
-}
-class UserStateError extends UserState {
-  final String error;
-
-  const UserStateError(this.error);
-
-  @override
-  List<Object> get props => [error];
+  List<Object?> get props => [user, error, isLoading];
 }
