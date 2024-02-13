@@ -35,7 +35,7 @@ class _MenuUserWidgetState extends ConsumerState<MenuUserWidget> {
         children: <Widget>[
           Container(
             height: 35,
-            child: ListTile(
+            child: const ListTile(
               leading: Icon(Icons.feedback_outlined, color: Colors.black45),
               title: Text("Geri Bildirim"),
             ),
@@ -43,8 +43,8 @@ class _MenuUserWidgetState extends ConsumerState<MenuUserWidget> {
           Container(
             height: 35,
             child: ListTile(
-              leading: Icon(Icons.exit_to_app, color: Colors.black45),
-              title: Text("Çıkış Yap"),
+              leading: const Icon(Icons.exit_to_app, color: Colors.black45),
+              title: const Text("Çıkış Yap"),
               onTap: () {
                 ref.read(loginControllerProvider.notifier).logout();
               },
@@ -52,7 +52,7 @@ class _MenuUserWidgetState extends ConsumerState<MenuUserWidget> {
           ),
           ListTile(
             leading: Padding(
-              padding: EdgeInsets.only(left: 5),
+              padding: const EdgeInsets.only(left: 5),
               child: SizedBox(
                 height: 30,
                 width: 30,
@@ -61,8 +61,8 @@ class _MenuUserWidgetState extends ConsumerState<MenuUserWidget> {
                     : Image.asset(ImagePath.user_female),
               ),
             ),
-            title: Text(_user?.name ?? ""), // Update this line
-            subtitle: Text(_user?.email ?? ""), // Update this line
+            title: Text('${_user?.name} ${_user?.surname}' ?? "", style: const TextStyle( fontSize: 14),), // Update this line
+            subtitle: Text(_user?.email ?? "", style: const TextStyle( fontSize: 14, color: Colors.black45),), // Update this line
           ),
         ],
       ),

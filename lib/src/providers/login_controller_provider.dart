@@ -1,6 +1,5 @@
 import 'package:erantech/src/models/user.dart';
 import 'package:erantech/src/providers/states/login_state.dart';
-import 'package:erantech/src/providers/states/token_state.dart';
 import 'package:erantech/src/repository/auth_repository.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
