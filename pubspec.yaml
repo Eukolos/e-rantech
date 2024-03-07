@@ -43,6 +43,7 @@ dependencies:
   go_router: ^13.1.0
   jwt_decoder: ^2.0.1
   dio: ^5.4.0
+  fl_chart: ^0.66.2
 
 dev_dependencies:
   flutter_test:

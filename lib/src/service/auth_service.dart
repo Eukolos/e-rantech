@@ -8,7 +8,7 @@ class AuthService {
   Future<User?> login(String email, String password) async {
     Dio dio = Dio();
 
-    const String baseUrl = 'http://192.168.1.141:8081';
+    const String baseUrl = 'http://192.168.1.12:8081';
 
     Map<String, dynamic> requestBody = {
       'email': email,
