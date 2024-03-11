@@ -2,8 +2,8 @@ import 'package:dio/dio.dart';
 import 'package:erantech/src/models/salesman_goal_achieved_entity.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-final goalProvider  = FutureProvider<List<SalesmanGoalAchievedEntity>>((ref) async {
-  const String apiUrl = 'http://localhost:8081/api/v1/goal/salesmen?startDate=2024-01-01&endDate=2024-03-31';
+final salesmanGoalProvider  = FutureProvider<List<SalesmanGoalAchievedEntity>>((ref) async {
+  const String apiUrl = 'http://192.168.1.12:8081/api/v1/goal/salesmen?startDate=2024-01-01&endDate=2024-03-31';
 
   try {
     // Create Dio instance

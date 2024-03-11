@@ -64,8 +64,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 child: Column(
                   children: [
                     Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Container(width:500, child: SalesmanGoalChartWidget()),
+                        Container(width:800, child: SalesmanGoalChartWidget()),
                         const SizedBox(
                           height: 20,),
                         GoalChartWidget(),
@@ -77,9 +79,21 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               ),
             ),
           ),
-          smallScreen: Container(
-            color: Colors.black45,
-          )),
+          smallScreen: SingleChildScrollView(
+            child: Container(
+              //hex color
+              color: const Color(0xffF6F6F6),
+              child: Column(
+                children: [
+                        Container( child: SalesmanGoalChartWidget()),
+                        const SizedBox(
+                          height: 20,),
+                        GoalChartWidget(),
+            
+                ],
+              ),
+            ),
+          ),),
     );
   }
 }
