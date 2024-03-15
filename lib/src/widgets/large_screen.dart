@@ -43,7 +43,8 @@ class LargeScreen extends StatelessWidget {
               
             ],
           ),
-        ),widget,
+        ),
+        widget,
 
       ],
     );

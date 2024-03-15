@@ -11,7 +11,8 @@ class Assets {
   static const String imagesBgImage = 'assets/images/bg_image.jpg';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesSplashLogo = 'assets/images/splash_logo.png';
-  static const String jsonSalesmanGoalAchievedEntity = 'lib/generated/json/salesman_goal_achieved_entity.g.dart';
+  static const String jsonSalesmanGoalAchievedEntity.g = 'lib/generated/json/salesman_goal_achieved_entity.g.dart';
+  static const String jsonWaybillEntity.g = 'lib/generated/json/waybill_entity.g.dart';
   static const String libMain = 'lib/main.dart';
   static const String menuSvgAccounting = 'assets/images/menu_svg/accounting.svg';
   static const String menuSvgExport = 'assets/images/menu_svg/export.svg';
@@ -19,15 +20,18 @@ class Assets {
   static const String menuSvgLogistic = 'assets/images/menu_svg/logistic.svg';
   static const String menuSvgManagement = 'assets/images/menu_svg/management.svg';
   static const String menuSvgPurchasing = 'assets/images/menu_svg/purchasing.svg';
+  static const String menuSvgSalesman = 'assets/images/menu_svg/salesman.svg';
   static const String menuSvgUserFemale = 'assets/images/menu_svg/user_female.png';
   static const String menuSvgUserMale = 'assets/images/menu_svg/user_male.png';
   static const String modelsRole = 'lib/src/models/role.dart';
   static const String modelsSalesmanGoalAchievedEntity = 'lib/src/models/salesman_goal_achieved_entity.dart';
   static const String modelsUser = 'lib/src/models/user.dart';
+  static const String modelsWaybillEntity = 'lib/src/models/waybill_entity.dart';
   static const String providersGoalProvider = 'lib/src/providers/goal_provider.dart';
   static const String providersLoginControllerProvider = 'lib/src/providers/login_controller_provider.dart';
   static const String providersRouterProvider = 'lib/src/providers/router_provider.dart';
   static const String providersSalesmenGoalProvider = 'lib/src/providers/salesmen_goal_provider.dart';
+  static const String providersWaybillProvider = 'lib/src/providers/waybill_provider.dart';
   static const String repositoryAuthRepository = 'lib/src/repository/auth_repository.dart';
   static const String serviceAuthService = 'lib/src/service/auth_service.dart';
   static const String statesLoginState = 'lib/src/providers/states/login_state.dart';
@@ -41,5 +45,7 @@ class Assets {
   static const String widgetsMenuItems = 'lib/src/widgets/menu_items.dart';
   static const String widgetsMenuUser = 'lib/src/widgets/menu_user.dart';
   static const String widgetsSalesmanGoalChart = 'lib/src/widgets/salesman_goal_chart.dart';
+  static const String widgetsSalesmanMatchChart = 'lib/src/widgets/salesman_match_chart.dart';
+  static const String widgetsWaybillList = 'lib/src/widgets/waybill_list.dart';
 
 }

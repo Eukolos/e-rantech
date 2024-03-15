@@ -56,7 +56,7 @@ class _SalesmanGoalChartWidgetState
     ];
     return BarChartGroupData(
       x: x,
-      barsSpace: 15,
+      barsSpace: 6,
       barRods: [
         BarChartRodData(
           toY: value,

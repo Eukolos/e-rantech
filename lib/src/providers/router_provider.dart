@@ -26,22 +26,17 @@ class RouterNotifier extends ChangeNotifier {
     );
   }
 
-  String? _redirectLogic(BuildContext context, GoRouterState state) {
-    final loginState = _ref.read(loginControllerProvider);
+  Future<String?> _redirectLogic(BuildContext context, GoRouterState state) async {
+    final loginController = _ref.read(loginControllerProvider.notifier);
+    final token = await loginController.getToken();
 
     final areWeLoggingIn = state.matchedLocation == '/login';
 
-    if (loginState is LoginStateInitial) {
+    if (token == null || token.isEmpty) {
       return areWeLoggingIn ? null : '/login';
-    }  else if (loginState is LoginStateError) {
-      return areWeLoggingIn ? null : '/login';
-    } else if (loginState is LoginStateLoading) {
-      return areWeLoggingIn ? null : '/login';
-    } else if (loginState is LoginStateSuccess) {
+    } else {
       return areWeLoggingIn ? '/' : null;
     }
-
-
   }
 
 

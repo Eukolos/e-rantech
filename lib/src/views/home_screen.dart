@@ -8,6 +8,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../helpers/responsiveness.dart';
 import '../widgets/goal_chart.dart';
+import '../widgets/salesman_match_chart.dart';
 
 class HomeScreen extends ConsumerStatefulWidget {
   const HomeScreen({super.key, required this.title});
@@ -36,7 +37,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 isDrawer: true,
               ),
             ),
-            MenuUserWidget(),
+            const MenuUserWidget(),
             const Align(
               alignment: Alignment.bottomCenter,
               child: Padding(
@@ -55,24 +56,28 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
       ),
       body: ResponsiveWidget(
           largeScreen: LargeScreen(
-            widget: Expanded(
-              flex: 4, // Represents 70% of the available space
+            widget: SingleChildScrollView(
               child: Container(
-                height: 1000,
-                //hex color
+                width: MediaQuery.of(context).size.width -300,
                 color: const Color(0xffF6F6F6),
-                child: Column(
+                child: const Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        Container(width:800, child: SalesmanGoalChartWidget()),
-                        const SizedBox(
+                        SizedBox(width:800, child: SalesmanGoalChartWidget()),
+                        SizedBox(
                           height: 20,),
                         GoalChartWidget(),
                       ]
-                    )
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        SizedBox(height:400 ,child: SalesmanMatchChartWidget())
+                      ]
+                    ),
 
                   ],
                 ),
@@ -85,10 +90,10 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
               color: const Color(0xffF6F6F6),
               child: Column(
                 children: [
-                        Container( child: SalesmanGoalChartWidget()),
+                        Container( child: const SalesmanGoalChartWidget()),
                         const SizedBox(
                           height: 20,),
-                        GoalChartWidget(),
+                        const GoalChartWidget(),
             
                 ],
               ),

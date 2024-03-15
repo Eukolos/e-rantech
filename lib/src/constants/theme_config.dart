@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 
 class ThemeConfig {
@@ -15,14 +14,14 @@ class ThemeConfig {
         foregroundColor: Colors.white,
 
       ),
-      fontFamily: GoogleFonts.poppins().fontFamily,
+  /*    fontFamily: GoogleFonts.poppins().fontFamily,
       textTheme: TextTheme(
         titleLarge: GoogleFonts.poppins(
           fontSize: 14,
           fontWeight: FontWeight.w600,
           color: Colors.black,
         ),
-      ),
+      ),*/
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ButtonStyle(
           backgroundColor: MaterialStateProperty.all(Colors.red.shade400),

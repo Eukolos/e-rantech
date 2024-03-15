@@ -101,10 +101,10 @@ packages:
     dependency: "direct main"
     description:
       name: dio
-      sha256: "797e1e341c3dd2f69f2dad42564a6feff3bfb87187d05abb93b9609e6f1645c3"
+      sha256: "49af28382aefc53562459104f64d16b9dfd1e8ef68c862d5af436cc8356ce5a8"
       url: "https://pub.dev"
     source: hosted
-    version: "5.4.0"
+    version: "5.4.1"
   equatable:
     dependency: "direct main"
     description:
@@ -178,10 +178,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_riverpod
-      sha256: "4bce556b7ecbfea26109638d5237684538d4abc509d253e6c5c4c5733b360098"
+      sha256: "0f1974eff5bbe774bf1d870e406fc6f29e3d6f1c46bd9c58e7172ff68a785d7d"
       url: "https://pub.dev"
     source: hosted
-    version: "2.4.10"
+    version: "2.5.1"
   flutter_secure_storage:
     dependency: "direct main"
     description:
@@ -234,10 +234,10 @@ packages:
     dependency: "direct main"
     description:
       name: flutter_svg
-      sha256: d39e7f95621fc84376bc0f7d504f05c3a41488c562f4a8ad410569127507402c
+      sha256: "7b4ca6cf3304575fe9c8ec64813c8d02ee41d2afe60bcfe0678bcb5375d596a2"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.9"
+    version: "2.0.10+1"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -256,14 +256,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "13.2.0"
-  google_fonts:
-    dependency: "direct main"
-    description:
-      name: google_fonts
-      sha256: f0b8d115a13ecf827013ec9fc883390ccc0e87a96ed5347a3114cac177ef18e8
-      url: "https://pub.dev"
-    source: hosted
-    version: "6.1.0"
   html:
     dependency: transitive
     description:
@@ -452,10 +444,10 @@ packages:
     dependency: transitive
     description:
       name: riverpod
-      sha256: "548e2192eb7aeb826eb89387f814edb76594f3363e2c0bb99dd733d795ba3589"
+      sha256: f21b32ffd26a36555e501b04f4a5dca43ed59e16343f1a30c13632b2351dfa4d
       url: "https://pub.dev"
     source: hosted
-    version: "2.5.0"
+    version: "2.5.1"
   shared_preferences:
     dependency: "direct main"
     description:
@@ -593,26 +585,26 @@ packages:
     dependency: transitive
     description:
       name: vector_graphics
-      sha256: "4ac59808bbfca6da38c99f415ff2d3a5d7ca0a6b4809c71d9cf30fba5daf9752"
+      sha256: "32c3c684e02f9bc0afb0ae0aa653337a2fe022e8ab064bcd7ffda27a74e288e3"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.10+1"
+    version: "1.1.11+1"
   vector_graphics_codec:
     dependency: transitive
     description:
       name: vector_graphics_codec
-      sha256: f3247e7ab0ec77dc759263e68394990edc608fb2b480b80db8aa86ed09279e33
+      sha256: c86987475f162fadff579e7320c7ddda04cd2fdeffbe1129227a85d9ac9e03da
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.10+1"
+    version: "1.1.11+1"
   vector_graphics_compiler:
     dependency: transitive
     description:
       name: vector_graphics_compiler
-      sha256: "18489bdd8850de3dd7ca8a34e0c446f719ec63e2bab2e7a8cc66a9028dd76c5a"
+      sha256: "12faff3f73b1741a36ca7e31b292ddeb629af819ca9efe9953b70bd63fc8cd81"
       url: "https://pub.dev"
     source: hosted
-    version: "1.1.10+1"
+    version: "1.1.11+1"
   vector_math:
     dependency: transitive
     description:
