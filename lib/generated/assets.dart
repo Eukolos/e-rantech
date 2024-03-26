@@ -11,8 +11,8 @@ class Assets {
   static const String imagesBgImage = 'assets/images/bg_image.jpg';
   static const String imagesLogo = 'assets/images/logo.png';
   static const String imagesSplashLogo = 'assets/images/splash_logo.png';
-  static const String jsonSalesmanGoalAchievedEntity.g = 'lib/generated/json/salesman_goal_achieved_entity.g.dart';
-  static const String jsonWaybillEntity.g = 'lib/generated/json/waybill_entity.g.dart';
+  static const String jsonSalesmanGoalAchievedEntity = 'lib/generated/json/salesman_goal_achieved_entity.g.dart';
+  static const String jsonWaybillEntity = 'lib/generated/json/waybill_entity.g.dart';
   static const String libMain = 'lib/main.dart';
   static const String menuSvgAccounting = 'assets/images/menu_svg/accounting.svg';
   static const String menuSvgExport = 'assets/images/menu_svg/export.svg';

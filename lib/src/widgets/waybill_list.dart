@@ -1,4 +1,3 @@
-import 'package:erantech/src/models/waybill_entity.dart';
 import 'package:erantech/src/providers/waybill_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -17,14 +16,18 @@ class _WaybillListWidgetState extends ConsumerState<WaybillListWidget> {
 
     return waybillListAsyncValue.when(
       data: (waybillList) {
-        return ListView.builder(
-          itemCount: waybillList.length,
-          itemBuilder: (context, index) {
-            final waybill = waybillList[index];
-            return ListTile(
-              title: Text(waybill.waybillNumber ?? 'No waybill number'),
-            );
-          },
+        return Container(
+          width: 300,
+          height: 600,
+          child: ListView.builder(
+            itemCount: waybillList.length,
+            itemBuilder: (context, index) {
+              final waybill = waybillList[index];
+              return ListTile(
+                title: Text(waybill.waybillNumber ?? 'No waybill number'),
+              );
+            },
+          ),
         );
       },
       loading: () => CircularProgressIndicator(),

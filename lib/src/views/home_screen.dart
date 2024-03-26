@@ -3,6 +3,7 @@ import 'package:erantech/src/widgets/large_screen.dart';
 import 'package:erantech/src/widgets/menu_items.dart';
 import 'package:erantech/src/widgets/menu_user.dart';
 import 'package:erantech/src/widgets/salesman_goal_chart.dart';
+import 'package:erantech/src/widgets/waybill_list.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -73,8 +74,11 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                       ]
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
+                        WaybillListWidget(),
+
                         SizedBox(height:400 ,child: SalesmanMatchChartWidget())
                       ]
                     ),

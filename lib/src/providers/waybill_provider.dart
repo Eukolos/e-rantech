@@ -4,7 +4,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 final waybillProvider  = FutureProvider<List<WaybillEntity>>((ref) async {
   // Replace 'your_api_endpoint' with the actual URL of your API
-  const String apiUrl = 'http://192.168.1.12:8081/api/v1/goal/waybill?startDate=2024-01-01&endDate=2024-03-31';
+  const String apiUrl = 'http://192.168.1.12:8081/api/v1/goal/waybills?startDate=2024-01-01&endDate=2024-03-31';
 
   try {
     // Create Dio instance
