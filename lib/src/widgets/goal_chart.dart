@@ -22,15 +22,14 @@ class _GoalChartWidgetState extends ConsumerState<GoalChartWidget> {
         } else if (snapshot.hasError) {
           return Text('Error: ${snapshot.error}');
         } else {
-          return Container(
-            height: 300,
-            width: 300,
-            child: Stack(
-              alignment: Alignment.center,
-              children: [
-                Text("HEDEF", style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.black)),
-                PieChart(
-
+          return Stack(
+            alignment: Alignment.center,
+            children: [
+              Text("Hedef"),
+              Container(
+                width: MediaQuery.of(context).size.height * 0.4,
+                height: MediaQuery.of(context).size.height * 0.4,
+                child: PieChart(
                   swapAnimationDuration: const Duration(milliseconds: 800),
                   swapAnimationCurve: Curves.easeInOutQuint,
                   PieChartData(
@@ -61,8 +60,8 @@ class _GoalChartWidgetState extends ConsumerState<GoalChartWidget> {
                   ),
 
                 ),
-              ],
-            ),
+              ),
+            ],
           );
         }
       },

@@ -17,12 +17,13 @@ class _WaybillListWidgetState extends ConsumerState<WaybillListWidget> {
     return waybillListAsyncValue.when(
       data: (waybillList) {
         return Container(
-          width: 300,
-          height: 600,
+          height: MediaQuery.of(context).size.height * 0.4,
           child: ListView.builder(
+            padding: const EdgeInsets.all(0),
             itemCount: waybillList.length,
             itemBuilder: (context, index) {
               final waybill = waybillList[index];
+
               return ListTile(
                 title: Text(waybill.waybillNumber ?? 'No waybill number'),
               );

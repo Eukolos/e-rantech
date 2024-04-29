@@ -59,28 +59,38 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
           largeScreen: LargeScreen(
             widget: SingleChildScrollView(
               child: Container(
+                height: MediaQuery.of(context).size.height - 100,
                 width: MediaQuery.of(context).size.width -300,
                 color: const Color(0xffF6F6F6),
                 child: const Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.min,
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(width:800, child: SalesmanGoalChartWidget()),
-                        SizedBox(
-                          height: 20,),
-                        GoalChartWidget(),
-                      ]
+                    Expanded(
+                      child: Row(
+                        children: [
+                          Expanded(flex:4, child: SalesmanGoalChartWidget()),
+                          SizedBox(
+                            width: 20,),
+                          Expanded(flex:1,child: GoalChartWidget()),
+                          SizedBox(
+                            width: 20,),
+                        ]
+                      ),
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        WaybillListWidget(),
+                    Expanded(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
 
-                        SizedBox(height:400 ,child: SalesmanMatchChartWidget())
-                      ]
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Expanded(flex: 4, child: WaybillListWidget()),
+                      
+                         // SizedBox(height:400 ,child: SalesmanMatchChartWidget())
+                        ]
+                      ),
                     ),
 
                   ],
@@ -97,7 +107,7 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                         Container( child: const SalesmanGoalChartWidget()),
                         const SizedBox(
                           height: 20,),
-                        const GoalChartWidget(),
+                        Container(height:400, width: 400, child: const GoalChartWidget()),
             
                 ],
               ),

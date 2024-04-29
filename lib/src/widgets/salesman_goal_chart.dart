@@ -7,7 +7,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import '../providers/salesmen_goal_provider.dart';
 
 class SalesmanGoalChartWidget extends ConsumerStatefulWidget {
-  const SalesmanGoalChartWidget({Key? key}) : super(key: key);
+  const  SalesmanGoalChartWidget({Key? key}) : super(key: key);
 
   final shadowColor = const Color(0xFFCCCCCC);
 
@@ -94,8 +94,7 @@ class _SalesmanGoalChartWidgetState
           return Padding(
             padding: const EdgeInsets.all(24),
             child: Container(
-              height: 400,
-              width: 900,
+              height: MediaQuery.of(context).size.height * 0.4,
               child: BarChart(
                 BarChartData(
                   groupsSpace: 80,
